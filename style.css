@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+html, body {
+ transition: all 2s ease-in-out;
+
+}
+
+
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#backgroundOne{
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("https://i1.wp.com/workhappy.com.au/wp-content/uploads/2018/10/image-from-rawpixel-id-385464-jpeg.jpg?fit=6000%2C4000&ssl=1");
+  background-size: cover;
+  background-position: center;
+  position:absolute;
+
+  /* -webkit-box-align:center;
+-webkit-box-pack:center;
+display:-webkit-box; */
+
+}
+
+#sticker {
+  position: relative;
+  width: 75vmin;
+  height: 75vmin;
+
+  display:block;
+  margin: auto;
+  /* top: 50%; */
+  transform: translateY(15%);
+
+}
+
+#sparkle{
+  position: relative;
+  width: 75vmin;
+  height: 85vmin;
+
+  display:block;
+  margin: auto;
+
+}
+
+
+
+
+
+
+
+
+/* /////// */
+
+#gridcontainer {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  margin: 0vmin 20vmin 0 20vmin;
+  grid-column-gap: 2vmin;
+  grid-row-gap: 2vmin;
+}
+
+.star {
+  display: block;
+  /* object-fit: cover; */
+  /* grid-column-end: span 1; */
+  width: 100%;
+
+  /* animation: rotate 5s infinite; */
+}
+
+.star:hover {
+  animation: rotate 5s infinite;
+}
+
+.star:active {
+  animation: small 2s ease-In;
+
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+
+}
+
+@keyframes small {
+  from {transform: scale(1);}
+  to {transform: scale(0);}
+}
+
+.button {
+  background-color: transparent;
+  background-repeat:no-repeat;
+
+   border: none;
+   color: transparent;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+
+   overflow: hidden;
+   outline: none;
+
+   margin: 0;
+   padding: 0;
+
+   height: 100%;
+}
+
+
+
+.star2 {
+  display: block;
+  width: 100%;
+
+  transform: rotate(24deg);
+}
+
+#background {
+  background-image: url("https://images.unsplash.com/photo-1544161758-95e208b2e6ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80");
+  background-repeat: no-repeat;
+  background-position:50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+@media only screen and (max-width: 600px) {
+/* For tablets: */
+#gridcontainer {
+  grid-template-columns: repeat(5,1fr);
+
+}
+
+@media only screen and (min-width: 600px) {
+/* For tablets: */
+#gridcontainer {
+  grid-template-columns: repeat(7,1fr);
+
+}
